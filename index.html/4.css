@@ -1,0 +1,66 @@
+:root{
+  --accent: #0b74de;
+  --muted: #666;
+  --bg: #f8f9fb;
+  --card: #fff;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:1rem;}
+
+.site-header{background:#fff;border-bottom:1px solid #e6e9ee;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.8rem 0;}
+.brand{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.15rem;}
+.nav a{margin-left:1rem;color:#333;text-decoration:none;font-weight:500}
+
+.hero{
+  background:linear-gradient(180deg, rgba(11,116,222,0.08), transparent 60%);
+  padding:3.5rem 0;
+}
+.hero-inner{display:flex;flex-direction:column;gap:0.75rem;}
+.hero h1{font-size:2rem;margin:0;}
+.hero p{margin:0;color:var(--muted)}
+
+.btn{
+  display:inline-block;padding:0.6rem 1rem;border-radius:8px;background:var(--accent);
+  color:#fff;text-decoration:none;border:0;font-weight:600;cursor:pointer;
+}
+.btn.ghost{background:transparent;border:1px solid rgba(11,116,222,0.12);color:var(--accent)}
+
+.services{padding:2rem 0;}
+.services .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(19,24,40,0.04)}
+
+.how-it-works{padding:1.5rem 0;}
+.contact{padding:1.5rem 0;}
+
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted);font-size:0.9rem;background:transparent;border-top:1px solid #eee;margin-top:2rem}
+
+/* forms and cards */
+.center-page{display:flex;justify-content:center;align-items:center;padding:2rem 0}
+.auth-card, .booking-card{width:100%;max-width:520px;background:var(--card);padding:1.25rem;border-radius:12px;box-shadow:0 10px 30px rgba(11,116,222,0.04)}
+.auth-card h2, .booking-card h2{margin-top:0}
+
+label{display:block;margin:0.5rem 0 0.75rem;color:#333;font-size:0.95rem}
+input, select, textarea{
+  width:100%;padding:0.6rem;border-radius:8px;border:1px solid #e6e9ee;margin-top:0.35rem;font-size:0.95rem;
+}
+.two-col{display:flex;gap:0.5rem}
+.two-col span{flex:1}
+
+.muted{color:var(--muted);font-size:0.95rem;margin-top:0.75rem}
+
+/* small screen */
+@media (max-width:720px){
+  .hero h1{font-size:1.5rem}
+  .header-inner{padding:0.6rem 0}
+  .nav{display:none}
+}
